@@ -3,10 +3,7 @@
 import { MonthSummary } from "@/components/collaborator/month-summary";
 import { TimeEntryForm } from "@/components/collaborator/time-entry-form";
 import { TimeEntryList } from "@/components/collaborator/time-entry-list";
-import { Button } from "@/components/ui/button"
 import { currentUser, getStoredTimeEntries } from "@/lib/mock-data";
-import { Clock, Home } from "lucide-react"
-import Link from "next/link"
 import { useMemo } from "react";
 
 export default function CollaboratorPage() {

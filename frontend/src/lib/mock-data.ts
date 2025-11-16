@@ -41,7 +41,7 @@ export const generateMockTimeEntries = (): TimeEntry[] => {
 
   mockUsers
     .filter((u) => u.role === "employee")
-    .forEach((user, userIndex) => {
+    .forEach((user) => {
       // Gerar entradas para os últimos 30 dias
       for (let i = 0; i < 30; i++) {
         const date = new Date(today)

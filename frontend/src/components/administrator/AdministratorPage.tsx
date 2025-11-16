@@ -1,11 +1,5 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
-import { Clock, FileText, Home } from "lucide-react"
-// import { AdminMetrics } from "@/components/admin-metrics"
-// import { AdminCharts } from "@/components/admin-charts"
-// import { AdminTimeEntryTable } from "@/components/admin-time-entry-table"
-import Link from "next/link"
 import { getStoredTimeEntries, mockUsers } from "@/lib/mock-data"
 import { AdminMetrics } from "./admin-metrics"
 import { AdminCharts } from "./admin-charts"

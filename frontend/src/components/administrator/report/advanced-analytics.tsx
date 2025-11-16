@@ -39,7 +39,7 @@ interface AdvancedAnalyticsProps {
   employees: Profile[]
 }
 
-export function AdvancedAnalytics({ entries, employees }: AdvancedAnalyticsProps) {
+export function AdvancedAnalytics({ entries }: AdvancedAnalyticsProps) {
   // Calculate weekly trend
   const last12Weeks = Array.from({ length: 12 }, (_, i) => {
     const date = new Date()

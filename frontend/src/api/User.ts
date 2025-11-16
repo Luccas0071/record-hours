@@ -7,6 +7,9 @@ export class AuthApi {
 
   async listUser(page: number, limit: number) {
     this.base_url.pathname = '/v1/user';
+    this.base_url.searchParams.set('page', page.toString());
+    this.base_url.searchParams.set('limit', limit.toString());
+
     const response = await fetch(this.base_url.toString(), {
         method: 'GET',
         headers: {

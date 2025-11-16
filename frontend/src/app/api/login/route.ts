@@ -5,7 +5,7 @@ export async function POST(req: NextRequest) {
   const { email, password } = await req.json();
 
   try {
-    const authApi = new AuthApi()
+    const authApi = new AuthApi();
     const user = await authApi.login({ email, password });
 
     // Configurar cookies

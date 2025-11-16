@@ -1,13 +1,8 @@
 
 
-import { MonthSummary } from "@/components/collaborator/month-summary";
-import { TimeEntryForm } from "@/components/collaborator/time-entry-form";
-import { TimeEntryList } from "@/components/collaborator/time-entry-list";
 import { Button } from "@/components/ui/button"
-import { getStoredTimeEntries } from "@/lib/mock-data";
-import { Clock, FileText, Home, LayoutDashboard, User } from "lucide-react"
+import { Clock, FileText, LayoutDashboard, User } from "lucide-react"
 import Link from "next/link"
-import { useMemo } from "react";
 
 export default function PrivateLayout({
   children,
