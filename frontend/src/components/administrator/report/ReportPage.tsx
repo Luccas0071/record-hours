@@ -7,8 +7,22 @@ import { AdvancedAnalytics } from "./advanced-analytics"
 import { EmployeeComparison } from "./employee-comparison"
 
 export default function ReportPage() {
-  const timeEntries = getStoredTimeEntries()
-  const employees = mockUsers
+  // const timeEntries = getStoredTimeEntries()
+  // const employees = mockUsers
+
+  const timeEntries = getStoredTimeEntries().map(entry => ({
+    ...entry,
+    user_id: entry.userId || "", // Ensure user_id exists
+  }))
+
+  const employees = mockUsers.map(user => ({
+    id: user.id,
+    name: user.name, // Add name property
+    role: user.role || "Employee", // Add role property with a default value
+    full_name: user.name || null, // Ensure full_name exists
+    email: user.email,
+  }))
+  
 
   return (
     <div className="min-h-svh bg-gradient-to-br from-slate-50 to-slate-100">
